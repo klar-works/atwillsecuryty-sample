@@ -1,0 +1,34 @@
+/* オープニングテキストのアニメーション */
+.loader-text {
+  animation: revealText 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes revealText {
+  0% {
+    opacity: 0;
+    letter-spacing: 0.1em;
+    transform: translateY(20px);
+    filter: blur(4px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: 0.4em; /* 広がりながら定着 */
+    transform: translateY(0);
+  }
+}
+
+/* スクロールバーのカスタマイズ（モダンな細いバー） */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a192f;
+}
+::-webkit-scrollbar-thumb {
+  background: #00e5ff;
+  border-radius: 4px;
+}
