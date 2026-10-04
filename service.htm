@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>業務内容 | アットウィルセキュリティ株式会社</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Noto Sans JP', 'sans-serif'],
+            en: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            navy: { 900: '#0a192f', 800: '#112240' },
+            accent: '#00e5ff',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-navy-900 text-white font-sans antialiased">
+
+  <!-- 動きのある背景 (Canvas) 追加 -->
+  <canvas id="bg-canvas" class="fixed inset-0 z-0 pointer-events-none opacity-40"></canvas>
+
+  <div class="relative z-10">
+<!-- 共通ヘッダー -->
+    <header class="fixed top-0 w-full flex justify-between items-center py-5 px-6 md:px-12 bg-navy-900/95 backdrop-blur-md border-b border-white/10 z-40">
+      <div class="font-en font-bold text-lg md:text-xl tracking-wider">
+        <a href="index.html" class="hover:text-accent transition-colors">AT WILL SECURITY</a>
+      </div>
+      <nav class="hidden md:flex gap-8 text-sm font-en tracking-widest">
+        <a href="company.html" class="hover:text-accent transition-colors">ABOUT</a>
+        <a href="service.html" class="hover:text-accent transition-colors">SERVICE</a>
+        <a href="recruit.html" class="hover:text-accent transition-colors">RECRUIT</a>
+        <a href="contact.html" class="hover:text-accent transition-colors">CONTACT</a>
+      </nav>
+      <!-- スマホ用メニューボタン -->
+      <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none z-50">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </header>
+
+    <!-- 共通スマホメニュー -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-navy-900/95 backdrop-blur-lg z-30 flex flex-col justify-center items-center">
+      <nav class="flex flex-col gap-8 text-xl font-en tracking-widest text-center">
+        <a href="company.html" class="hover:text-accent transition-colors">ABOUT</a>
+        <a href="service.html" class="hover:text-accent transition-colors">SERVICE</a>
+        <a href="recruit.html" class="hover:text-accent transition-colors">RECRUIT</a>
+        <a href="contact.html" class="hover:text-accent transition-colors">CONTACT</a>
+      </nav>
+    </div>
+    
+    <!-- ページタイトル (Hero) -->
+    <section class="pt-40 pb-20 px-6 md:px-24 bg-gradient-to-b from-navy-800/80 to-navy-900/80">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-accent font-en tracking-[0.3em] mb-4 text-sm">BUSINESS OUTLINE</p>
+        <!-- 文字サイズを修正 text-4xl md:text-5xl -->
+        <h1 class="text-3xl md:text-5xl font-black mb-8 border-l-4 border-accent pl-6 leading-tight">
+          業務内容
+        </h1>
+        <p class="text-gray-300 leading-relaxed max-w-3xl text-base md:text-lg">
+          土木・建築・住宅関連の工事現場を中心に、歩行者や車両の安全を確保する<br class="hidden md:block">
+          「2号警備業務（交通誘導警備）」を主軸としたサービスを展開しています。
+        </p>
+      </div>
+    </section>
+
+    <!-- サービス詳細コンテンツ -->
+    <div class="max-w-5xl mx-auto px-6 md:px-24 py-16 bg-navy-900/50 backdrop-blur-sm">
+      
+      <!-- セクション1: 交通誘導警備 -->
+      <section class="mb-24">
+        <div class="flex flex-col md:flex-row gap-12 items-start">
+          <div class="md:w-1/3">
+            <h2 class="text-3xl font-bold mb-4 font-en tracking-wider">01. <br class="hidden md:block">TRAFFIC<br class="hidden md:block"> CONTROL</h2>
+            <span class="inline-block border border-accent text-accent text-xs px-3 py-1 tracking-widest mb-6">交通誘導警備（2号警備）</span>
+          </div>
+          <div class="md:w-2/3 border-t border-white/20 pt-6">
+            <h3 class="text-xl md:text-2xl font-bold mb-6">工事現場での確実な誘導と、近隣への配慮</h3>
+            <p class="text-gray-300 leading-loose mb-8">
+              主に住宅関係・建築・土木工事の現場において、歩行者や一般車両、工事用車両の誘導を行います。現場の規模や周辺の交通状況を的確に把握し、事故を未然に防ぐための最善のポジションで誘導業務を実施します。通行止めの際はお客様へ迂回路のご案内も行い、スムーズな交通網の維持に努めます。
+            </p>
+            
+            <h4 class="text-lg font-bold text-accent mb-4 border-b border-white/10 pb-2">アットウィルセキュリティの誘導業務の特徴</h4>
+            <ul class="space-y-4 mb-8">
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-accent mt-1"></i>
+                <p class="text-gray-300 text-sm leading-relaxed"><strong class="text-white">気持ちの良い挨拶と声かけ：</strong> 単に誘導灯を振るだけでなく、通行される方や近隣住民の方へ「ご協力ありがとうございます」と声に出して挨拶を行い、クレームの出にくい現場環境を作ります。</p>
+              </li>
+              <li class="flex gap-4">
+                <i class="fa-solid fa-check text-accent mt-1"></i>
+                <p class="text-gray-300 text-sm leading-relaxed"><strong class="text-white">自ら考える臨機応変な対応：</strong> マニュアル通りに「立つ」だけでなく、刻々と変化する現場の状況に合わせて、従業員一人ひとりが最善の安全策を考え、柔軟に動きます。</p>
+              </li>
+            </ul>
+
+            <div class="relative w-full h-[250px] md:h-[300px] overflow-hidden">
+              <div class="absolute inset-0 bg-accent/20 z-10 mix-blend-overlay"></div>
+              <img src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?auto=format&fit=crop&q=80&w=1000" alt="工事現場のイメージ" class="w-full h-full object-cover grayscale opacity-70">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- セクション2: 教育体制・品質管理 (画像追加) -->
+      <section class="mb-24">
+        <div class="flex flex-col md:flex-row gap-12 items-start">
+          <div class="md:w-1/3">
+            <h2 class="text-3xl font-bold mb-4 font-en tracking-wider">02. <br class="hidden md:block">EDUCATION<br class="hidden md:block"> & QUALITY</h2>
+            <span class="inline-block border border-white/50 text-white/70 text-xs px-3 py-1 tracking-widest mb-6">教育体制と品質の担保</span>
+          </div>
+          <div class="md:w-2/3 border-t border-white/20 pt-6">
+            <h3 class="text-xl md:text-2xl font-bold mb-6">徹底した事前研修によるクオリティの均一化</h3>
+            <p class="text-gray-300 leading-loose mb-6">
+              業者様にご満足いただき、選ばれ続ける企業であるために、弊社ではスタッフの教育を最重要視しています。未経験のスタッフであっても、現場配置前に必ず3日間の充実した研修（座学・実技）を実施しています。
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 mb-8">
+              <p class="text-gray-300 leading-loose flex-1">
+                現場での誘導テクニックだけでなく、言葉遣いや身だしなみといった「接客業としての警備」の基本をしっかりと教え込みます。研修終了後も、経験豊富な先輩スタッフが現場で手厚くフォローするため、常に質の高い警備サービスをご提供可能です。
+              </p>
+              <!-- 新規画像追加 -->
+              <div class="w-full md:w-1/2 h-[200px] relative overflow-hidden">
+                <div class="absolute inset-0 bg-gray-500/20 z-10 mix-blend-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=600" alt="研修の様子" class="w-full h-full object-cover grayscale opacity-70">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 発注企業様向けメッセージ -->
+      <section class="p-8 md:p-16 border border-white/10 bg-navy-800/80 backdrop-blur-md text-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-navy-800 via-accent to-navy-800"></div>
+        <h3 class="text-xl md:text-3xl font-bold mb-6">警備のご依頼をご検討中の企業様へ</h3>
+        <p class="text-gray-300 leading-loose mb-10 text-sm md:text-base max-w-2xl mx-auto">
+          アットウィルセキュリティは、業者様の要望を的確に汲み取り、工事がスムーズに進行するよう全力でサポートいたします。<br>
+          急な人員手配のご相談や、長期的な現場での専属配置など、まずはお気軽にご相談ください。
+        </p>
+        <a href="mailto:info@atwill-security.com" class="inline-flex items-center justify-center gap-3 border border-accent bg-accent/10 text-accent px-10 py-4 font-en tracking-widest hover:bg-accent hover:text-navy-900 transition-all duration-300">
+          <i class="fa-regular fa-envelope"></i>
+          <span>CONTACT US</span>
+        </a>
+      </section>
+
+    </div>
+
+    <!-- フッター -->
+    <footer class="border-t border-white/10 py-12 px-6 md:px-24 flex flex-col md:flex-row justify-between items-center bg-navy-900 mt-20 relative z-20">
+      <div class="mb-6 md:mb-0 text-center md:text-left">
+        <h2 class="font-en font-bold text-xl mb-3 tracking-widest">AT WILL SECURITY CO.,LTD.</h2>
+        <p class="text-sm text-gray-400 mb-1">〒351-0115 埼玉県和光市新倉1-5-25 ロワジール102</p>
+        <div class="flex justify-center md:justify-start gap-4 text-xs font-en text-gray-500 mt-4">
+          <a href="#" class="hover:text-white transition">会社概要</a>
+          <a href="#" class="hover:text-white transition">標識</a>
+          <a href="#" class="hover:text-white transition">アクセス</a>
+        </div>
+      </div>
+      <div class="text-gray-500 text-xs font-en tracking-widest">
+        &copy; 2026 AT WILL SECURITY All Rights Reserved.
+      </div>
+    </footer>
+  </div>
+
+  <!-- JS読み込み -->
+  <script src="script.js"></script>
+</body>
+</html>
