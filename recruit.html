@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>採用情報 | アットウィルセキュリティ株式会社</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Noto Sans JP', 'sans-serif'],
+            en: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            navy: { 900: '#0a192f', 800: '#112240' },
+            accent: '#00e5ff',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-navy-900 text-white font-sans antialiased">
+
+  <!-- 動きのある背景 (Canvas) -->
+  <canvas id="bg-canvas" class="fixed inset-0 z-0 pointer-events-none opacity-40"></canvas>
+
+  <div class="relative z-10">
+<!-- 共通ヘッダー -->
+    <header class="fixed top-0 w-full flex justify-between items-center py-5 px-6 md:px-12 bg-navy-900/95 backdrop-blur-md border-b border-white/10 z-40">
+      <div class="font-en font-bold text-lg md:text-xl tracking-wider">
+        <a href="index.html" class="hover:text-accent transition-colors">AT WILL SECURITY</a>
+      </div>
+      <nav class="hidden md:flex gap-8 text-sm font-en tracking-widest">
+        <a href="company.html" class="hover:text-accent transition-colors">ABOUT</a>
+        <a href="service.html" class="hover:text-accent transition-colors">SERVICE</a>
+        <a href="recruit.html" class="hover:text-accent transition-colors">RECRUIT</a>
+        <a href="contact.html" class="hover:text-accent transition-colors">CONTACT</a>
+      </nav>
+      <!-- スマホ用メニューボタン -->
+      <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none z-50">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </header>
+
+    <!-- 共通スマホメニュー -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-navy-900/95 backdrop-blur-lg z-30 flex flex-col justify-center items-center">
+      <nav class="flex flex-col gap-8 text-xl font-en tracking-widest text-center">
+        <a href="company.html" class="hover:text-accent transition-colors">ABOUT</a>
+        <a href="service.html" class="hover:text-accent transition-colors">SERVICE</a>
+        <a href="recruit.html" class="hover:text-accent transition-colors">RECRUIT</a>
+        <a href="contact.html" class="hover:text-accent transition-colors">CONTACT</a>
+      </nav>
+    </div>
+    
+    <!-- ページタイトル (Hero) -->
+    <section class="pt-40 pb-20 px-6 md:px-24 bg-gradient-to-b from-navy-800/80 to-navy-900/80">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-accent font-en tracking-[0.3em] mb-4 text-sm">JOIN OUR TEAM</p>
+        <h1 class="text-3xl md:text-5xl font-black mb-8 border-l-4 border-accent pl-6 leading-tight">
+          採用情報
+        </h1>
+        <p class="text-gray-300 leading-relaxed max-w-3xl text-base md:text-lg">
+          「立つ」だけの警備は、もう終わり。<br class="hidden md:block">
+          自ら考え、行動し、街の安全と安心を共に創り上げる仲間を募集しています。
+        </p>
+      </div>
+    </section>
+
+    <!-- アットウィルが選ばれる理由 (Benefits) -->
+    <div class="max-w-5xl mx-auto px-6 md:px-24 py-16">
+      <div class="mb-16 text-center md:text-left">
+        <h2 class="text-2xl md:text-3xl font-bold mb-2">アットウィルセキュリティが選ばれる<span class="text-accent">3つの理由</span></h2>
+        <p class="text-gray-400 text-sm">REASONS TO CHOOSE US</p>
+      </div>
+
+      <!-- 理由1 -->
+      <section class="mb-20 flex flex-col md:flex-row gap-10 items-center">
+        <div class="md:w-1/2 w-full h-[250px] relative overflow-hidden group">
+          <div class="absolute inset-0 bg-accent/20 z-10 mix-blend-overlay group-hover:bg-transparent transition duration-500"></div>
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800" alt="チームワーク" class="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition duration-700">
+        </div>
+        <div class="md:w-1/2 border-l border-white/20 pl-8 py-4">
+          <span class="text-accent font-en text-xl font-bold mb-2 block">01</span>
+          <h3 class="text-xl md:text-2xl font-bold mb-4">未経験からプロへ。<br>安心の「3日間研修」</h3>
+          <p class="text-gray-300 leading-loose text-sm md:text-base">
+            警備の経験がなくても全く問題ありません。現場に出る前に、挨拶の基本から誘導の実技まで、3日間の丁寧な研修を行います。現場デビュー後も先輩スタッフがしっかりフォローするため、安心してスタートできます。
+          </p>
+        </div>
+      </section>
+
+      <!-- 理由2 -->
+      <section class="mb-20 flex flex-col md:flex-row-reverse gap-10 items-center">
+        <div class="md:w-1/2 w-full h-[250px] relative overflow-hidden group">
+          <div class="absolute inset-0 bg-accent/20 z-10 mix-blend-overlay group-hover:bg-transparent transition duration-500"></div>
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800" alt="働く環境" class="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition duration-700">
+        </div>
+        <div class="md:w-1/2 border-l md:border-l-0 md:border-r border-white/20 pl-8 md:pl-0 md:pr-8 py-4 text-left md:text-right">
+          <span class="text-accent font-en text-xl font-bold mb-2 block">02</span>
+          <h3 class="text-xl md:text-2xl font-bold mb-4">日払い対応＆寮完備。<br>柔軟で手厚い待遇</h3>
+          <p class="text-gray-300 leading-loose text-sm md:text-base">
+            「すぐに収入が必要」「新しい環境で生活をスタートさせたい」という方のために、日払い制度や寮を完備しています。ライフスタイルに合わせた柔軟な働き方が可能な環境を整えています。
+          </p>
+        </div>
+      </section>
+
+      <!-- 理由3 -->
+      <section class="mb-24 flex flex-col md:flex-row gap-10 items-center">
+        <div class="md:w-1/2 w-full h-[250px] relative overflow-hidden group">
+          <div class="absolute inset-0 bg-accent/20 z-10 mix-blend-overlay group-hover:bg-transparent transition duration-500"></div>
+          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32b7?auto=format&fit=crop&q=80&w=800" alt="多様な年齢層" class="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition duration-700">
+        </div>
+        <div class="md:w-1/2 border-l border-white/20 pl-8 py-4">
+          <span class="text-accent font-en text-xl font-bold mb-2 block">03</span>
+          <h3 class="text-xl md:text-2xl font-bold mb-4">20代〜幅広い年齢層。<br>風通しの良いフラットな職場</h3>
+          <p class="text-gray-300 leading-loose text-sm md:text-base">
+            年齢や経歴にとらわれず、様々なバックグラウンドを持つスタッフが活躍しています。「挨拶・声かけ」をモットーにしているからこそ、社内のコミュニケーションも活発で、困ったことはすぐに相談できる雰囲気です。
+          </p>
+        </div>
+      </section>
+
+      <!-- 募集要項 (REQUIREMENTS) -->
+      <section class="mb-24">
+        <h3 class="text-2xl md:text-3xl font-bold mb-8 font-en tracking-wider border-b border-white/20 pb-4">REQUIREMENTS <span class="text-sm font-sans text-gray-400 font-normal ml-4">募集要項</span></h3>
+        
+        <!-- カードを使わないリストスタイルの要項 -->
+        <dl class="divide-y divide-white/10 text-sm md:text-base">
+          <div class="py-6 flex flex-col md:flex-row md:items-start gap-2 md:gap-8 hover:bg-white/5 transition px-4">
+            <dt class="w-full md:w-1/4 font-bold text-accent">募集職種</dt>
+            <dd class="w-full md:w-3/4 text-gray-200">交通誘導警備スタッフ（正社員・アルバイト）</dd>
+          </div>
+          <div class="py-6 flex flex-col md:flex-row md:items-start gap-2 md:gap-8 hover:bg-white/5 transition px-4">
+            <dt class="w-full md:w-1/4 font-bold text-accent">業務内容</dt>
+            <dd class="w-full md:w-3/4 text-gray-200 leading-relaxed">
+              住宅・建築・土木工事現場での歩行者・車両の誘導業務。<br>
+              ※未経験の方は、配置前に3日間の法定研修を行いますのでご安心ください。
+            </dd>
+          </div>
+          <div class="py-6 flex flex-col md:flex-row md:items-start gap-2 md:gap-8 hover:bg-white/5 transition px-4">
+            <dt class="w-full md:w-1/4 font-bold text-accent">給与</dt>
+            <dd class="w-full md:w-3/4 text-gray-200">
+              日給 10,000円 〜<br>
+              <span class="text-xs text-gray-400 mt-1 block">※経験・資格・夜勤等の条件により異なります。詳細はお問い合わせください。<br>※日払い・週払い制度あり（規定あり）</span>
+            </dd>
+          </div>
+          <div class="py-6 flex flex-col md:flex-row md:items-start gap-2 md:gap-8 hover:bg-white/5 transition px-4">
+            <dt class="w-full md:w-1/4 font-bold text-accent">勤務地</dt>
+            <dd class="w-full md:w-3/4 text-gray-200">埼玉県和光市周辺、および都内・近郊の各現場<br><span class="text-xs text-gray-400">※直行直帰可能</span></dd>
+          </div>
+          <div class="py-6 flex flex-col md:flex-row md:items-start gap-2 md:gap-8 hover:bg-white/5 transition px-4">
+            <dt class="w-full md:w-1/4 font-bold text-accent">待遇・福利厚生</dt>
+            <dd class="w-full md:w-3/4 text-gray-200 leading-relaxed">
+              社会保険完備 / 交通費規定内支給 / 制服貸与 / 寮完備 / 資格取得支援制度 / 正社員登用制度
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- 応募CTAセクション -->
+      <section class="p-8 md:p-16 border border-accent/30 bg-navy-800/80 backdrop-blur-md text-center relative overflow-hidden">
+        <!-- アクセントの光エフェクト -->
+        <div class="absolute -top-20 -left-20 w-40 h-40 bg-accent rounded-full blur-[80px] opacity-20"></div>
+        <div class="absolute -bottom-20 -right-20 w-40 h-40 bg-accent rounded-full blur-[80px] opacity-20"></div>
+        
+        <h3 class="text-2xl md:text-3xl font-bold mb-4 relative z-10">私たちと一緒に働きませんか？</h3>
+        <p class="text-gray-300 leading-loose mb-10 text-sm md:text-base max-w-2xl mx-auto relative z-10">
+          経験や年齢は問いません。「やってみたい」という気持ちを全力でサポートします。<br>
+          面接日の調整や、働き方のご相談だけでも大歓迎です。まずは下記よりご応募ください。
+        </p>
+        <a href="mailto:info@atwill-security.com" class="relative z-10 inline-flex items-center justify-center gap-4 bg-accent text-navy-900 px-12 py-5 font-en font-bold tracking-widest hover:bg-white hover:text-navy-900 transition-all duration-300 shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:shadow-[0_0_30px_rgba(255,255,255,0.6)]">
+          ENTRY NOW
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </section>
+
+    </div>
+
+    <!-- フッター -->
+    <footer class="border-t border-white/10 py-12 px-6 md:px-24 flex flex-col md:flex-row justify-between items-center bg-navy-900 mt-20 relative z-20">
+      <div class="mb-6 md:mb-0 text-center md:text-left">
+        <h2 class="font-en font-bold text-xl mb-3 tracking-widest">AT WILL SECURITY CO.,LTD.</h2>
+        <p class="text-sm text-gray-400 mb-1">〒351-0115 埼玉県和光市新倉1-5-25 ロワジール102</p>
+        <div class="flex justify-center md:justify-start gap-4 text-xs font-en text-gray-500 mt-4">
+          <a href="#" class="hover:text-white transition">会社概要</a>
+          <a href="#" class="hover:text-white transition">標識</a>
+          <a href="#" class="hover:text-white transition">アクセス</a>
+        </div>
+      </div>
+      <div class="text-gray-500 text-xs font-en tracking-widest">
+        &copy; 2026 AT WILL SECURITY All Rights Reserved.
+      </div>
+    </footer>
+  </div>
+
+  <!-- JS読み込み -->
+  <script src="script.js"></script>
+</body>
+</html>
