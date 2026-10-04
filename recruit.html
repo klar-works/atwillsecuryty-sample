@@ -168,12 +168,18 @@
         
         <!-- テキストエリア (左側) -->
         <div class="relative z-10 w-full md:w-3/5 text-center md:text-left">
-          <h3 class="text-2xl md:text-3xl font-bold mb-4">私たちと一緒に働きませんか？</h3>
+          <!-- 見出し：単語の途中で改行されないように inline-block でグループ化 -->
+          <h3 class="text-2xl lg:text-3xl font-bold mb-5 leading-tight">
+            <span class="inline-block">私たちと一緒に</span><span class="inline-block">働きませんか？</span>
+          </h3>
+          
+          <!-- 本文：フレーズごとに inline-block で囲み、美しい文字組みを維持 -->
           <p class="text-gray-300 leading-loose mb-10 text-sm md:text-base">
-            経験や年齢は問いません。「やってみたい」という気持ちを全力でサポートします。<br class="hidden md:block">
-            面接日の調整や、働き方のご相談だけでも大歓迎です。まずは下記よりご応募ください。
+            経験や年齢は問いません。<span class="inline-block">「やってみたい」という気持ちを</span><span class="inline-block">全力でサポートします。</span><br class="hidden lg:block">
+            面接日の調整や、<span class="inline-block">働き方のご相談だけでも大歓迎です。</span><span class="inline-block">まずは下記よりご応募ください。</span>
           </p>
-          <a href="contact.html" class="relative z-10 inline-flex items-center justify-center gap-4 bg-accent text-navy-900 px-10 md:px-12 py-4 md:py-5 font-en font-bold tracking-widest hover:bg-white hover:text-navy-900 transition-all duration-300 shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:shadow-[0_0_30px_rgba(255,255,255,0.6)]">
+          
+          <a href="contact.html" class="relative z-10 inline-flex items-center justify-center gap-4 bg-accent text-navy-900 px-10 md:px-12 py-4 md:py-5 font-en font-bold tracking-widest hover:bg-white hover:text-navy-900 transition-all duration-300 shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] mt-2">
             ENTRY NOW
             <i class="fa-solid fa-arrow-right"></i>
           </a>
